@@ -3,7 +3,7 @@
 --  Every artist, film, album and song is fictional. No lyrics, recordings or
 --  artwork are stored; album art is drawn from two stored colours and
 --  playback uses a generated sketch (see music_sources.MUSE_SKETCH).
---  Demo logins:  aarav / Listener@123   kavya / Curator@123   admin / Admin@123
+--  Demo login is provisioned by migration 0006_varsha_demo_account.sql.
 -- =====================================================================
 SET NAMES utf8mb4;
 SET @muse_actor_id = NULL;
@@ -579,19 +579,19 @@ UPDATE music_sources SET fallback_source_id = 2 WHERE source_id = 3;
 
 -- users + 1:1 profiles + chosen languages
 INSERT INTO users (username, email, password_hash, role_id, created_at, last_login_at) VALUES
-('admin', 'admin@muse.dev', '$2a$10$xUj7EJmlFKxuSIlSvUZaAOPIm8b94BhrfnK55h3OsZZ51sOqAxCzK', 3, NOW() - INTERVAL 70 DAY, NOW() - INTERVAL 1 HOUR),
-('kavya', 'kavya@muse.dev', '$2a$10$o8UC0GRRK3wx33IxCZjoTeVc57RzPLvVPnu4vyYgE3hVqWwjrUgua', 2, NOW() - INTERVAL 69 DAY, NOW() - INTERVAL 2 HOUR),
-('aarav', 'aarav@muse.dev', '$2a$10$S/fTa5ZAykr9zZPnCToIreraEDXyFu8ofeJp3tprxfTn7ix357VmW', 1, NOW() - INTERVAL 68 DAY, NOW() - INTERVAL 3 HOUR),
-('meera', 'meera@muse.dev', '$2a$10$S/fTa5ZAykr9zZPnCToIreraEDXyFu8ofeJp3tprxfTn7ix357VmW', 1, NOW() - INTERVAL 67 DAY, NOW() - INTERVAL 4 HOUR),
-('rohan', 'rohan@muse.dev', '$2a$10$S/fTa5ZAykr9zZPnCToIreraEDXyFu8ofeJp3tprxfTn7ix357VmW', 1, NOW() - INTERVAL 66 DAY, NOW() - INTERVAL 5 HOUR),
-('sana', 'sana@muse.dev', '$2a$10$S/fTa5ZAykr9zZPnCToIreraEDXyFu8ofeJp3tprxfTn7ix357VmW', 1, NOW() - INTERVAL 65 DAY, NOW() - INTERVAL 6 HOUR),
-('leo', 'leo@muse.dev', '$2a$10$S/fTa5ZAykr9zZPnCToIreraEDXyFu8ofeJp3tprxfTn7ix357VmW', 1, NOW() - INTERVAL 64 DAY, NOW() - INTERVAL 7 HOUR),
-('ishita', 'ishita@muse.dev', '$2a$10$S/fTa5ZAykr9zZPnCToIreraEDXyFu8ofeJp3tprxfTn7ix357VmW', 1, NOW() - INTERVAL 63 DAY, NOW() - INTERVAL 8 HOUR),
-('arjun', 'arjun@muse.dev', '$2a$10$S/fTa5ZAykr9zZPnCToIreraEDXyFu8ofeJp3tprxfTn7ix357VmW', 1, NOW() - INTERVAL 62 DAY, NOW() - INTERVAL 9 HOUR),
-('priya', 'priya@muse.dev', '$2a$10$S/fTa5ZAykr9zZPnCToIreraEDXyFu8ofeJp3tprxfTn7ix357VmW', 1, NOW() - INTERVAL 61 DAY, NOW() - INTERVAL 10 HOUR),
-('dev', 'dev@muse.dev', '$2a$10$S/fTa5ZAykr9zZPnCToIreraEDXyFu8ofeJp3tprxfTn7ix357VmW', 1, NOW() - INTERVAL 60 DAY, NOW() - INTERVAL 11 HOUR),
-('nila', 'nila@muse.dev', '$2a$10$S/fTa5ZAykr9zZPnCToIreraEDXyFu8ofeJp3tprxfTn7ix357VmW', 1, NOW() - INTERVAL 59 DAY, NOW() - INTERVAL 12 HOUR),
-('kiran', 'kiran@muse.dev', '$2a$10$S/fTa5ZAykr9zZPnCToIreraEDXyFu8ofeJp3tprxfTn7ix357VmW', 1, NOW() - INTERVAL 58 DAY, NOW() - INTERVAL 13 HOUR);
+('admin', 'admin@muse.dev', '$2a$10$qq07vUOoEw15Q3JcW9d2MuWKxf.ZffhJExuONogMoIeRcI7YkuHXu', 3, NOW() - INTERVAL 70 DAY, NOW() - INTERVAL 1 HOUR),
+('kavya', 'kavya@muse.dev', '$2a$10$E6isgZdNX.vRDte6HMD8nekebV1TIOK39EwjVMhjTWJqYXfJ9WLjy', 2, NOW() - INTERVAL 69 DAY, NOW() - INTERVAL 2 HOUR),
+('aarav', 'aarav@muse.dev', '$2a$10$phkpuigD3WWW5sB0uxhFx.HSe1nDZdIN8BZ95OOlN90AQWpZzSZlG', 1, NOW() - INTERVAL 68 DAY, NOW() - INTERVAL 3 HOUR),
+('meera', 'meera@muse.dev', '$2a$10$phkpuigD3WWW5sB0uxhFx.HSe1nDZdIN8BZ95OOlN90AQWpZzSZlG', 1, NOW() - INTERVAL 67 DAY, NOW() - INTERVAL 4 HOUR),
+('rohan', 'rohan@muse.dev', '$2a$10$phkpuigD3WWW5sB0uxhFx.HSe1nDZdIN8BZ95OOlN90AQWpZzSZlG', 1, NOW() - INTERVAL 66 DAY, NOW() - INTERVAL 5 HOUR),
+('sana', 'sana@muse.dev', '$2a$10$phkpuigD3WWW5sB0uxhFx.HSe1nDZdIN8BZ95OOlN90AQWpZzSZlG', 1, NOW() - INTERVAL 65 DAY, NOW() - INTERVAL 6 HOUR),
+('leo', 'leo@muse.dev', '$2a$10$phkpuigD3WWW5sB0uxhFx.HSe1nDZdIN8BZ95OOlN90AQWpZzSZlG', 1, NOW() - INTERVAL 64 DAY, NOW() - INTERVAL 7 HOUR),
+('ishita', 'ishita@muse.dev', '$2a$10$phkpuigD3WWW5sB0uxhFx.HSe1nDZdIN8BZ95OOlN90AQWpZzSZlG', 1, NOW() - INTERVAL 63 DAY, NOW() - INTERVAL 8 HOUR),
+('arjun', 'arjun@muse.dev', '$2a$10$phkpuigD3WWW5sB0uxhFx.HSe1nDZdIN8BZ95OOlN90AQWpZzSZlG', 1, NOW() - INTERVAL 62 DAY, NOW() - INTERVAL 9 HOUR),
+('priya', 'priya@muse.dev', '$2a$10$phkpuigD3WWW5sB0uxhFx.HSe1nDZdIN8BZ95OOlN90AQWpZzSZlG', 1, NOW() - INTERVAL 61 DAY, NOW() - INTERVAL 10 HOUR),
+('dev', 'dev@muse.dev', '$2a$10$phkpuigD3WWW5sB0uxhFx.HSe1nDZdIN8BZ95OOlN90AQWpZzSZlG', 1, NOW() - INTERVAL 60 DAY, NOW() - INTERVAL 11 HOUR),
+('nila', 'nila@muse.dev', '$2a$10$phkpuigD3WWW5sB0uxhFx.HSe1nDZdIN8BZ95OOlN90AQWpZzSZlG', 1, NOW() - INTERVAL 59 DAY, NOW() - INTERVAL 12 HOUR),
+('kiran', 'kiran@muse.dev', '$2a$10$phkpuigD3WWW5sB0uxhFx.HSe1nDZdIN8BZ95OOlN90AQWpZzSZlG', 1, NOW() - INTERVAL 58 DAY, NOW() - INTERVAL 13 HOUR);
 
 INSERT INTO user_profiles (user_id, display_name, region_code, content_filter, listening_habit, onboarding_completed_at) VALUES
 (1, 'Asha Rao', 'IN-KA', 'OFF', NULL, NOW() - INTERVAL 70 DAY),
