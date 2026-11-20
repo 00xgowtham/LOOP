@@ -12,7 +12,7 @@ ingestion pipeline, a review queue, a database health panel and an audit log.
 It is a BTech CSE DBMS project, so the database does the heavy lifting:
 64 normalised tables, 20 views, 11 stored procedures, 11 functions,
 14 triggers, 71 CHECK constraints, 124 foreign keys, versioned migrations and
-47 documented SQL query blocks.
+47 documented SQL query blocks. vaishnav
 
 **It runs completely without external API keys.** MusicBrainz, TMDB, the YouTube
 Data API, a licensed preview provider and an optional AI helper are wired as
