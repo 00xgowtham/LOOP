@@ -12,7 +12,8 @@ ingestion pipeline, a review queue, a database health panel and an audit log.
 It is a BTech CSE DBMS project, so the database does the heavy lifting:
 64 normalised tables, 20 views, 11 stored procedures, 11 functions,
 14 triggers, 71 CHECK constraints, 124 foreign keys, versioned migrations and
-47 documented SQL query blocks. vaishnav
+47 documented SQL query blocks. vaishnav revan
+
 
 **It runs completely without external API keys.** MusicBrainz, TMDB, the YouTube
 Data API, a licensed preview provider and an optional AI helper are wired as
@@ -20,7 +21,8 @@ separate adapters that stay off until configured — see [docs/PROVIDERS.md](doc
 
 > **Moods describe music, not people.** LOOP maps words and audio features to musical moods. It never claims to diagnose how anyone feels.
 > **Region is a signal, not a stereotype.** A listener's region adds a small, configurable weight; it never decides their taste.
-> **The public static archive uses the real uploaded music dataset.** It contains 28,372 track-metadata records from 1950–2019 (CC BY 4.0); the lyrics column is excluded. The upload contains no recordings, streaming URLs, track durations, language labels, albums or film metadata, so static archive playback is disabled and no fake songs or recordings are shown. The separate MySQL development seed remains fictional test data.
+> **The public static archive uses the real uploaded music dataset.** It contains 28,372 track-metadata records from 1950–2019 (CC BY 4.0); the lyrics column is excluded. The upload contains no recordings, streaming URLs, track durations, language labels, albums or film metadata, so static archive playback is disabled and no fake songs or recordings are shown. The separate MySQL development seed remains fictional test data
+
 
 ---
 
